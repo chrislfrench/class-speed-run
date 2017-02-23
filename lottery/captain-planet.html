@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Captain-Planet</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div  id="captain-planet" class="col-sm-12">
+			<img src="http://rs768.pbsrc.com/albums/xx329/rabidcyrus/captainplanet.jpg~c200"/>
+			</div>
+		</div>
+
+		<button type="button" id="left" class="btn btn-success">Left</button>
+
+		<button type="button" id="right" class="btn btn-success">right</button>
+
+		<button type="button" id="dance" class="btn btn-success">Dance</button>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.js">
+	</script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="crossorigin="anonymous"></script>
+	<script>
+	$(document).ready(function(){
+		  $("#left").on("click", function() {
+	       $("#captain-planet").animate({ left: "-=200px" }, "normal");
+	     });
+
+		 $("#right").on("click", function() {
+	       $("#captain-planet").animate({ right: "-=200px" }, "normal");
+	     });
+
+	     $("#dance").on("click", function() {
+	     	$( "#captain-planet" ).effect( "shake" );
+	     });
+
+	 });
+
+	
+	</script>
+</body>
+</html>
